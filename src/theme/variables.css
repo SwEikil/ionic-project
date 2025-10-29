@@ -1,0 +1,38 @@
+/**
+ * Ionic Dark Theme
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import "@ionic/angular/css/palettes/dark.system.css";
+
+:root {
+  /* Soothing palette for cat stories // Ніжна палітра для історій про котиків */
+  --ion-color-primary: #4f9ded;
+  --ion-color-primary-rgb: 79, 157, 237;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #458ad0;
+  --ion-color-primary-tint: #63aaeF;
+
+  --ion-color-secondary: #6bd9ce;
+  --ion-color-secondary-rgb: 107, 217, 206;
+  --ion-color-secondary-contrast: #0f2c36;
+  --ion-color-secondary-contrast-rgb: 15, 44, 54;
+  --ion-color-secondary-shade: #5ec0b5;
+  --ion-color-secondary-tint: #7adbD5;
+
+  --ion-color-tertiary: #f7b267;
+  --ion-color-tertiary-rgb: 247, 178, 103;
+  --ion-color-tertiary-contrast: #3a250d;
+  --ion-color-tertiary-contrast-rgb: 58, 37, 13;
+  --ion-color-tertiary-shade: #d99c5b;
+  --ion-color-tertiary-tint: #f8ba76;
+
+  --ion-color-success: #56c090;
+  --ion-color-warning: #f7d774;
+  --ion-color-danger: #ef7d83;
+}

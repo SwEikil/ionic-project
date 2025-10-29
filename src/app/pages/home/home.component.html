@@ -1,0 +1,159 @@
+<ion-header translucent="true">
+  <ion-toolbar color="light">
+    <ion-title>Cat Haven</ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" color="medium">
+        Volunteer
+      </ion-button>
+      <ion-button color="primary">
+        <ion-icon slot="start" name="heart"></ion-icon>
+        Adopt now
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="cat-haven" fullscreen="true" color="light">
+  <div class="content-wrapper">
+    <!-- Hero section sets the emotional tone // Геройська секція задає емоційний настрій -->
+    <section class="hero">
+      <div class="hero-text">
+        <ion-badge color="tertiary">Fresh rescues</ion-badge>
+        <h1>Meet your next purring companion</h1>
+        <p>
+          Gentle felines rescued across Norway are ready for soft blankets, warm laps, and your favourite
+          window-side fjord views.
+        </p>
+        <div class="hero-chips">
+          <ion-chip *ngFor="let highlight of heroHighlights" outline="true">
+            <ion-icon [name]="highlight.icon" color="primary"></ion-icon>
+            <ion-label>{{ highlight.label }}</ion-label>
+          </ion-chip>
+        </div>
+        <div class="hero-actions">
+          <ion-button color="primary" size="large">
+            <ion-icon slot="start" name="paw"></ion-icon>
+            Explore cats
+          </ion-button>
+          <ion-button fill="clear" color="dark" size="large">
+            Care guides
+            <ion-icon slot="end" name="arrow-forward"></ion-icon>
+          </ion-button>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <ion-img
+          src="https://news.stanford.edu/__data/assets/image/0024/170475/cats.jpg"
+          alt="Cat relaxing on a cozy sofa"
+        ></ion-img>
+        <ion-card class="hero-stat-card">
+          <ion-card-content>
+            <div class="stat-number">128</div>
+            <div class="stat-label">Cats found homes in 2025</div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </section>
+
+    <!-- Adoptable grid showcases personalities // Секція з котами показує їх характери -->
+    <section class="adoptable">
+      <div class="section-header">
+        <h2>Adoptable stars</h2>
+        <p>Each profile is updated by our volunteer families.</p>
+      </div>
+      <ion-grid>
+        <ion-row class="cards-row">
+          <ion-col size="12" size-md="4" *ngFor="let cat of adoptableCats">
+            <ion-card class="cat-card">
+              <div class="image-wrapper">
+                <ion-img [src]="cat.image" [alt]="cat.name + ' the cat'"></ion-img>
+                <ion-badge class="age-badge" color="light" mode="ios">{{ cat.age }}</ion-badge>
+              </div>
+              <ion-card-header>
+                <ion-card-title>{{ cat.name }}</ion-card-title>
+                <ion-card-subtitle>{{ cat.personality }}</ion-card-subtitle>
+              </ion-card-header>
+              <ion-card-content>
+                <div class="tag-list">
+                  <ion-chip *ngFor="let tag of cat.tags" [style.--chip-accent]="cat.accent">
+                    <ion-icon name="sparkles" [style.color]="cat.accent"></ion-icon>
+                    <ion-label>{{ tag }}</ion-label>
+                  </ion-chip>
+                </div>
+                <ion-button expand="block" color="light" class="cat-action" [style.color]="cat.accent">
+                  Get to know {{ cat.name }}
+                </ion-button>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </section>
+
+    <!-- Tips stack provides actionable help // Список порад дарує практичні знання -->
+    <section class="tips">
+      <div class="section-header">
+        <h2>Daily care boosts</h2>
+        <p>Short, sweet habits that keep whiskers happy.</p>
+      </div>
+      <ion-row class="tips-row">
+        <ion-col size="12" size-md="4" *ngFor="let tip of wellnessTips">
+          <ion-card class="tip-card">
+            <ion-card-header>
+              <ion-chip color="primary" class="icon-chip">
+                <ion-icon [name]="tip.icon" slot="start"></ion-icon>
+                <ion-label>Tip</ion-label>
+              </ion-chip>
+              <ion-card-title>{{ tip.title }}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              {{ tip.description }}
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </section>
+
+    <!-- Community block invites participation // Блок спільноти запрошує долучитися -->
+    <section class="community">
+      <div class="section-header">
+        <h2>Community events</h2>
+        <p>Join local meetups, workshops, and cuddle corners.</p>
+      </div>
+      <ion-list class="event-list">
+        <ion-item lines="full" *ngFor="let event of communityEvents">
+          <ion-icon slot="start" name="calendar" color="tertiary"></ion-icon>
+          <ion-label>
+            <h3>{{ event.title }}</h3>
+            <p>{{ event.detail }}</p>
+            <div class="event-meta">
+              <ion-badge color="secondary">{{ event.date }}</ion-badge>
+              <ion-badge color="medium">{{ event.location }}</ion-badge>
+            </div>
+          </ion-label>
+          <ion-button slot="end" fill="clear" color="primary">
+            RSVP
+          </ion-button>
+        </ion-item>
+      </ion-list>
+    </section>
+
+    <!-- Ending call-to-action shares contact info // Фінальний заклик ділиться контактами -->
+    <section class="cta">
+      <ion-card>
+        <ion-card-content class="cta-content">
+          <div>
+            <h2>Ready to welcome love?</h2>
+            <p>
+              Message us on <strong>cats@haven.no</strong> or call <strong>+47 21 02 03 04</strong>.
+            </p>
+          </div>
+          <ion-button color="primary" size="large">
+            <ion-icon slot="start" name="chatbubble-ellipses"></ion-icon>
+            Book a video visit
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </section>
+  </div>
+</ion-content>
