@@ -3,6 +3,8 @@
   "type": "capacitor",
   "webDir": "dist/lonic-project/browser",
   "build": {
+    "ios": [],
+    "android": [],
     "web": [
       {
         "command": "npm ci && npm run build",
