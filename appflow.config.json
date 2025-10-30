@@ -1,0 +1,11 @@
+{
+  "appId": "808a8ef2",
+  "type": "capacitor",
+  "webDir": "dist/lonic-project/browser",
+  "integrations": {
+    "capacitor": {
+      "androidPath": "android",
+      "iosPath": "ios"
+    }
+  }
+}
