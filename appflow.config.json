@@ -3,10 +3,12 @@
   "type": "capacitor",
   "webDir": "dist/lonic-project/browser",
   "build": {
-    "web": {
-      "command": "npm ci && npm run build",
-      "outputDirectory": "dist/lonic-project/browser"
-    }
+    "web": [
+      {
+        "command": "npm ci && npm run build",
+        "outputDirectory": "dist/lonic-project/browser"
+      }
+    ]
   },
   "integrations": {
     "capacitor": {
