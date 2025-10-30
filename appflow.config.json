@@ -1,17 +1,7 @@
 {
   "appId": "808a8ef2",
   "type": "capacitor",
-  "webDir": "dist/lonic-project/browser",
-  "build": {
-    "ios": [],
-    "android": [],
-    "web": [
-      {
-        "command": "npm ci && npm run build",
-        "outputDirectory": "dist/lonic-project/browser"
-      }
-    ]
-  },
+  "webDir": "www",
   "integrations": {
     "capacitor": {
       "androidPath": "android",
