@@ -2,6 +2,16 @@
   "appId": "808a8ef2",
   "type": "capacitor",
   "webDir": "www",
+  "build": {
+    "ios": [],
+    "android": [],
+    "web": [
+      {
+        "command": "npm ci && npm run build",
+        "outputDirectory": "www"
+      }
+    ]
+  },
   "integrations": {
     "capacitor": {
       "androidPath": "android",
