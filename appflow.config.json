@@ -1,7 +1,7 @@
 {
   "apps": [
     {
-      "appId": "808a8ef2",
+      "appId": "b130385a",
       "root": ".",
       "type": "capacitor",
       "webDir": "www",
