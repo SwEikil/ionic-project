@@ -10,3 +10,11 @@ body {
 }
 
 /* Global polish keeps visuals cohesive // Глобальні стилі підтримують цілісність вигляду */
+
+ion-content {
+  scrollbar-width: none; /* Hide scrollbar in Firefox-based webviews */
+}
+
+ion-content::-webkit-scrollbar {
+  display: none; /* Remove scrollbar track on iOS and WebKit browsers */
+}
