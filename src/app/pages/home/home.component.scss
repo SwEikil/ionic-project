@@ -13,6 +13,16 @@ ion-header {
   }
 }
 
+@media (max-width: 600px) {
+  ion-header ion-toolbar .adopt-now-button {
+    --padding-start: 12px; /* tighten button spacing once the icon is hidden */
+  }
+
+  ion-header ion-toolbar .adopt-now-button ion-icon {
+    display: none;
+  }
+}
+
 .cat-haven {
   color: inherit;
 }

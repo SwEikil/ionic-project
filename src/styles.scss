@@ -18,3 +18,11 @@ ion-content {
 ion-content::-webkit-scrollbar {
   display: none; /* Remove scrollbar track on iOS and WebKit browsers */
 }
+
+ion-content::part(scroll) {
+  scrollbar-width: none; /* Hide scrollbar inside Ionic scrollable area */
+}
+
+ion-content::part(scroll)::-webkit-scrollbar {
+  display: none;
+}
